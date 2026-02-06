@@ -1,11 +1,113 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CALCULADORA</title>
+    <title>Calculadora ISR</title>
+    <link rel="stylesheet" href="disecalcular.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-calculator"></i> Calculadora ISR </h1>
+           
+            <div class="info-box">
+                <h3 class="lbl-nombre">Yaritza Jimènez</h3>
+            </div>
+        </header>
+
+        <main>
+            <section class="calculator-card">
+                <div class="input-section">
+                    <h2><i class="fas fa-user"></i> Datos del Empleado</h2>
+                    
+                    <div class="form-group">
+                        <label for="nombre"><i class="fas fa-signature"></i> Nombre:</label>
+                        <input type="text" id="nombre" placeholder="Ingrese su nombre">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="salario"><i class="fas fa-money-bill-wave"></i> Sueldo ($):</label>
+                        <input type="number" id="salario" min="0" step="0.01" placeholder="Ej: 800.00">
+                    </div>
+                    
+                    <div class="button-group">
+                        <button class="btn calcular" onclick="calcular()">
+                            <i class="fas fa-calculator"></i> Calcular ISR
+                        </button>
+                        <button class="btn limpiar" onclick="limpiar()">
+                            <i class="fas fa-broom"></i> Limpiar
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="result-section oculto" id="resultado">
+                    <!-- Los resultados se insertarán aquí dinámicamente -->
+                </div>
+            </section>
+            
+            <section class="info-section">
+                <h2><i class="fas fa-table"></i> Tabla de Retención ISR - Mensual</h2>
+                <div class="table-container">
+                    <table class="tax-table">
+                        <thead>
+                            <tr>
+                                <th>Desde</th>
+                                <th>Hasta</th>
+                                <th>% Aplicar</th>
+                                <th>Sobre exceso de</th>
+                                <th>Cuota fija</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="exento">
+                                <td>$0.01</td>
+                                <td>$550.00</td>
+                                <td><span class="badge exento-badge">Exento</span></td>
+                                <td>-</td>
+                                <td>$0.00</td>
+                            </tr>
+                            <tr>
+                                <td>$550.01</td>
+                                <td>$895.24</td>
+                                <td>10%</td>
+                                <td>$550.00</td>
+                                <td>$17.67</td>
+                            </tr>
+                            <tr>
+                                <td>$895.25</td>
+                                <td>$2,038.10</td>
+                                <td>20%</td>
+                                <td>$895.24</td>
+                                <td>$60.00</td>
+                            </tr>
+                            <tr>
+                                <td>$2,038.11</td>
+                                <td>En adelante</td>
+                                <td>30%</td>
+                                <td>$2,038.10</td>
+                                <td>$288.57</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="formula-box">
+                    <h3><i class="fas fa-calculator"></i> Fórmula de cálculo:</h3>
+                    <p><strong>Salario Gravado = Salario Nominal - (AFP 7.25% + ISSS 3%)</strong></p>
+                    <p><strong>ISR = (Salario Gravado - Límite inferior) × % Tramo + Cuota Fija</strong></p>
+                    <p><strong>Salario Neto = Salario Nominal - (AFP + ISSS + ISR)</strong></p>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <p>Calculadora basada en las tablas oficiales de ISR - El Salvador</p>
+            
+        </footer>
+    </div>
+
+    <script src="calcular.js"></script>
 </body>
 </html>

@@ -1,0 +1,347 @@
+/* Reset y estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #8cb0eb 100%);
+    color: #333;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #4a6fa5;
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    font-size: 2.5rem;
+}
+
+.subtitle {
+    color: #7f8c8d;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.info-box {
+    background-color: #e8f4fc;
+    border-left: 4px solid #3498db;
+    padding: 5px 15px;
+    border-radius: 0 8px 8px 0;
+    margin-top: 20px;
+    text-align: left;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.info-box p {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.lbl-nombre{
+    text-align: center;
+    color: #665b5b;
+}
+
+/* Tarjeta de calculadora */
+.calculator-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 40px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.input-section, .result-section {
+    flex: 1;
+    min-width: 100px;
+    padding: 30px;
+}
+
+.input-section {
+    background-color: #f9f9f9;
+    border-right: 1px solid #eee;
+}
+
+.result-section {
+    background-color: #ffffff;
+}
+
+h2 {
+    color: #000000;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.8rem;
+}
+
+/* Formulario */
+.form-group {
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+input {
+    width: 35%;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+    
+    
+}
+
+input:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+/* Botones */
+.button-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+    justify-content: center;
+}
+
+.btn {
+    width: 200px;  
+    flex: none;    
+    padding: 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.3s;
+     
+}
+
+.calcular {
+    background-color: #15542f;
+    color: white;
+}
+
+.calcular:hover {
+    background-color: #27ae60;
+    transform: translateY(-2px);
+}
+
+.limpiar {
+    background-color: #8d2014;
+    color: white;
+}
+
+.limpiar:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px);
+}
+
+/* Sección de resultados */
+.result-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.result-section p {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #ddd;
+    font-size: 16px;
+}
+
+.result-section p strong {
+    color: #2c3e50;
+}
+
+.result-section p span {
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.destacado {
+    background-color: #d4edda;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+    border-left: 5px solid #28a745;
+    font-size: 1.2rem;
+}
+
+.oculto {
+    display: none;
+}
+
+/* Tabla de impuestos */
+.info-section {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.table-container {
+    overflow-x: auto;
+    margin-bottom: 30px;
+}
+
+.tax-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.tax-table th {
+    background-color: #2c3e50;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.tax-table td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+.tax-table tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.tax-table tr:hover {
+    background-color: #e9f7fe;
+}
+
+.exento {
+    background-color: #e8f6ef !important;
+}
+
+.badge {
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.exento-badge {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+/* Caja de fórmula */
+.formula-box {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 25px;
+    border-left: 5px solid #3498db;
+    margin-top: 30px;
+}
+
+.formula-box h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.formula-box p {
+    margin-bottom: 12px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #000000;
+    border-top: 1px solid #ddd;
+    margin-top: 30px;
+}
+
+.footer-note {
+    margin-top: 10px;
+    font-style: italic;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .calculator-card {
+        flex-direction: column;
+    }
+    
+    .input-section {
+        border-right: none;
+        border-bottom: 1px solid #eee;
+    }
+    
+    h1 {
+        font-size: 2rem;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .button-group {
+        flex-direction: column;
+    }
+    
+    .tax-table th, .tax-table td {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+}
+
